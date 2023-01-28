@@ -1,4 +1,4 @@
-# sequrity_example
+# security_example
 Задача Безопасное приложение
 
 Описание

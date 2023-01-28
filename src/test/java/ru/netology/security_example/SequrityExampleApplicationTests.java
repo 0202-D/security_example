@@ -1,4 +1,4 @@
-package ru.netology.sequrity_example;
+package ru.netology.security_example;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

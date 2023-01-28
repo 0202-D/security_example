@@ -1,4 +1,4 @@
-package ru.netology.sequrity_example;
+package ru.netology.security_example;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(SequrityExampleApplication.class);
+        return application.sources(SecurityExampleApplication.class);
     }
 
 }

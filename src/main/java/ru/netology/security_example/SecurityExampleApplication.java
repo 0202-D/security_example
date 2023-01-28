@@ -1,13 +1,13 @@
-package ru.netology.sequrity_example;
+package ru.netology.security_example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SequrityExampleApplication {
+public class SecurityExampleApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SequrityExampleApplication.class, args);
+        SpringApplication.run(SecurityExampleApplication.class, args);
     }
 
 }

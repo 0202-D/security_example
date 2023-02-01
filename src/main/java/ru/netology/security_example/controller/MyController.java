@@ -16,7 +16,7 @@ public class MyController {
     }
     @PreAuthorize("hasRole('ROLE_WRITE')or hasRole('ROLE_DELETE')")
     @GetMapping("/delete")
-    public String hi(){
+    public String delete(){
         return "Deleted";
     }
     @GetMapping("/read")

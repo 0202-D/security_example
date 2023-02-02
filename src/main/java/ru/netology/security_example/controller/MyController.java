@@ -11,24 +11,28 @@ import javax.annotation.security.RolesAllowed;
 @RestController
 public class MyController {
     @GetMapping("/")
-    public String hello(){
+    public String hello() {
         return "Hello";
     }
+
     @PreAuthorize("hasRole('ROLE_WRITE')or hasRole('ROLE_DELETE')")
     @GetMapping("/delete")
-    public String delete(){
+    public String delete() {
         return "Deleted";
     }
+
     @GetMapping("/read")
     @Secured("ROLE_READ")
-    public String read(){
+    public String read() {
         return "Read";
     }
+
     @GetMapping("/write")
     @RolesAllowed("ROLE_WRITE")
-    public String write(){
+    public String write() {
         return "Write";
     }
+
     @GetMapping("/username")
     @PostAuthorize("#username == authentication.principal.username")
     public String named(String username) {

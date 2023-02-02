@@ -1,4 +1,4 @@
-package ru.netology.security_example;
+package ru.netology.security_example.config;
 
 
 import org.springframework.context.annotation.Configuration;
@@ -9,11 +9,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 
-@EnableGlobalMethodSecurity(securedEnabled = true,prePostEnabled = true,jsr250Enabled = true)
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true, jsr250Enabled = true)
 public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
         auth.inMemoryAuthentication()
                 .withUser("user")
                 .password("{noop}user")
@@ -26,9 +25,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("superadmin")
                 .password("{noop}superadmin")
                 .roles("DELETE");
-
     }
-
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -37,6 +34,5 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests().anyRequest().authenticated()
                 .and()
                 .formLogin();
-
     }
 }
